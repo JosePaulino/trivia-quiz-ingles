@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+#geral {
+  background-color: cadetblue;
+  text-align: center;
+  justify-content: center;
+}
+
+#topo {
+  justify-content: center;
+  background-color: darkolivegreen;
+
+}
+
+#topo {
+  display: flex;
+}
+
+#name {
+  margin: 0 0 0 3px;
+}
+
+#conteudo {
+  width: 400px;
+  height: 200px;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+#pontuacao {
+  height: 60px;
+  margin-top: 10px;
+  background-color: cornflowerblue;
+}
+
+#points {
+  width: 40px;
+  height: 30px;
+  background-color: crimson;
+  color: black;
+  margin: 0 auto;
+  font-weight: bold;
+}
