@@ -46,8 +46,3 @@ function optionClickEvent(e){
 
 
 // Esconde area de questoes e mostra area de rezultado
-function finishQuiz(){
-  document.querySelector('.end').style.display = 'block'
-  document.querySelector('.questionArea').style.display = 'none'
-
-}
