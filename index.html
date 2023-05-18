@@ -5,22 +5,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="script.js">
+  
   <title>Quiz de Inglês</title>
 </head>
 <body>
   
   <h1>Teste seus conhecimentos em inglês</h1>
   <div id="geral">
-
+    
     <div id="topo">           
       <div id="name">  
         <label>Enter your name:</label>
         <input id="name" type="text"  autofocus/>
       </div>
-    </div>
-
-    <div id="conteudo">
     </div>
     
     <div id="pontuacao">
@@ -30,6 +27,26 @@
       </div>
     </div>
 
-  </div>  
+    <div class="questionArea">
+      <div class="question">...</div>
+      <div class="options">
+
+      </div>
+    </div>
+	
+    
+	  <div class="end">
+      <img src="" class="image">
+      <div class="endText1">Congratulations!</div>
+      <div class="textPct">Congratulations!</div>
+      <div class="endText2">You answered 9 questions and got 8 right.</div>
+      <button>Start</button>
+    </div>
+    
+    
+  </div>
+  
+  <script src="questions.js"></script>  
+	<script src="script.js"></script>
 </body>
 </html>

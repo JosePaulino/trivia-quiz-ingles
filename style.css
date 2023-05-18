@@ -48,7 +48,7 @@ h1 {
 .question {
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .option {
@@ -79,10 +79,6 @@ h1 {
 .option:hover {
   border: 1px white solid;
 }
-
-
-
-#pontuacao {}
 
 #points {
   width: 40px;

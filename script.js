@@ -3,8 +3,10 @@
 // variável para mostrar questão atual
 let currentQuestion = 0
 let correctAnswers = 0
-
 showQuestion()
+
+//Evento do Botão Start
+document.querySelector('.end button').addEventListener('click', resetEvent)
 
 // Funcoes
 function showQuestion(){
@@ -13,7 +15,7 @@ function showQuestion(){
 
     
 
-    document.querySelector('.end').style.display = 'nome'
+    document.querySelector('.end').style.display = 'none'
     document.querySelector('.questionArea').style.display = 'block'
 
     document.querySelector('.question').innerHTML = q.question
@@ -45,4 +47,32 @@ function optionClickEvent(e){
 }
 
 
-// Esconde area de questoes e mostra area de rezultado
+//Esconde area de questoes e mostra area de rezultado
+function finishQuiz(){
+  let points = Math.floor((correctAnswers / questions.length) * 100) //Calcula a porcentagem de acerto.
+
+//Adiciona as condições para porcentagem e cores para cada valor.
+  if (points < 30) {
+    document.querySelector('.endText1').innerHTML = 'not good, try again!'
+    document.querySelector('.textPct').style.color = '#cc0000'
+  } else if(points >= 30 && points < 70){
+    document.querySelector('.endText1').innerHTML = 'Very good!!!'
+    document.querySelector('.textPct').style.color = '#f7ff00'
+  }else if(points >= 70){
+    document.querySelector('.endText1').innerHTML = 'Congratulations!!!!'
+    document.querySelector('.textPct').style.color = '#228b22'
+  }
+
+  document.querySelector('.textPct').innerHTML = `Hit ${points}%`
+  document.querySelector('.endText2').innerHTML = `You answered ${questions.length} questions and got right ${correctAnswers}.`
+
+  document.querySelector('.end').style.display = 'block'
+  document.querySelector('.questionArea').style.display = 'none'
+}
+
+//Zerando tudo no botão Start.
+function resetEvent(){
+  correctAnswers = 0
+  currentQuestion = 0
+  showQuestion()
+}
