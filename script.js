@@ -64,7 +64,7 @@ function finishQuiz(){
   }
 
   document.querySelector('.textPct').innerHTML = `Hit ${points}%`
-  document.querySelector('.endText2').innerHTML = `You answered ${questions.length} questions and got right ${correctAnswers}.`
+  document.querySelector('.endText2').innerHTML = `You answered <span class='numQuest'>${questions.length}</span>  questions and got <span class='correctNum'>${correctAnswers}</span> right.`
 
   document.querySelector('.end').style.display = 'block'
   document.querySelector('.questionArea').style.display = 'none'
