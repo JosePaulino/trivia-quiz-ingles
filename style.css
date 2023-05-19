@@ -27,8 +27,13 @@ h1 {
   display: flex;
 }
 
-#name {
-  margin: 0 0 0 3px;
+.name {
+  margin: 35px 0 10px 3px;
+}
+
+.name2 {
+  display: none;
+  margin: 35px 0 10px 3px;
 }
 
 .questionArea,
@@ -120,19 +125,23 @@ h1 {
 }
 
 
-button {
+.btnStart {
   font-size: 16px;
   padding: 10px 20px;
   margin-top: 12px;
   margin-bottom: 5px;
   border-radius: 12px;
-  transition-duration: 0.2s;
+  transition-duration: 0.4s;
   background-color: rgb(202, 192, 212);
 }
 
-button:hover {
+.btnStart:hover {
   background-color: darkslategray;
   color: white;
+}
+
+.btnOk {
+  padding: 0 5px 0 5px;
 }
 
 
