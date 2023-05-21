@@ -28,6 +28,17 @@ h1 {
 
 .name {
   margin: 35px 0 10px 3px;
+  justify-content: center;
+  display: flex;
+
+}
+
+input {
+  outline: none;
+  padding: 2px;
+  margin: 0 4px 0 10px;
+  border-radius: 8px;
+  font-size: 16px;
 }
 
 .name2 {
@@ -140,15 +151,14 @@ h1 {
 }
 
 .btnOk {
-  padding: 0 5px 0 5px;
+  width: 35px;
+  font-weight: bolder;
+
 }
 
+.btnOk:hover {
+  background-color: rgba(0, 195, 195, 0.3);
+  color: white;
+  transition-duration: 0.4s;
 
-#points {
-  width: 40px;
-  height: 30px;
-  background-color: crimson;
-  color: black;
-  margin: 0 auto;
-  font-weight: bold;
 }

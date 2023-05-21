@@ -3,12 +3,15 @@
 // variável para mostrar questão atual
 let currentQuestion = 0
 let correctAnswers = 0
-
+let contScore = 0
 showQuestion()
 
 
+//Evento do Botão Start
+document.querySelector('.end button').addEventListener('click', resetEvent)
 
-function addName(){
+// Funcoes
+function addName(){ //Capta o nome do usuário
     
   let nome = document.getElementById('name').value
 
@@ -20,11 +23,7 @@ function addName(){
   
 }
 
-//Evento do Botão Start
-document.querySelector('.end button').addEventListener('click', resetEvent)
-
-// Funcoes
-function showQuestion(){
+function showQuestion(){ //Traz as perguntas e respostas
   if(questions[currentQuestion]){
     let q = questions[currentQuestion] // Armazena a variável na variável q (só para nao ficar o nome grande)    
 
@@ -49,15 +48,14 @@ function showQuestion(){
   }
 }
 
-//evento de click, ler o data-op e verifica se a resposta esta correta
+//Evento de click, ler o data-op e verifica se a resposta esta correta
 function optionClickEvent(e){
     let clickedOption = parseInt(e.target.getAttribute('data-op'))
 
     if (questions[currentQuestion].answer === clickedOption) { // verifica se acertou e adiciona contador ++
-      correctAnswers++
-      //cont +1
+      correctAnswers++      
     }
-    currentQuestion++
+    currentQuestion++     
     showQuestion() //Vai para proxima questao
 }
 
