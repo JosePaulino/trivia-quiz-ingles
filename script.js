@@ -3,7 +3,7 @@
 // variável para mostrar questão atual
 let currentQuestion = 0
 let correctAnswers = 0
-let nome = " "
+
 showQuestion()
 
 
@@ -16,6 +16,8 @@ function addName(){
   document.querySelector('.name2').style.display = 'block'
 
   document.querySelector('.name2').innerHTML = 'Let`s go ' + nome 
+  document.getElementById('name').value = ""
+  
 }
 
 //Evento do Botão Start
@@ -86,10 +88,10 @@ function finishQuiz(){
 function resetEvent(){
   correctAnswers = 0
   currentQuestion = 0
-  nome = " "
-
+  addName()
   showQuestion()
 
+  //Reorganiza a aparencia da opção nome  
   document.querySelector('.name').style.display = 'block'
   document.querySelector('.name2').style.display = 'none'
   
