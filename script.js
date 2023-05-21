@@ -34,7 +34,7 @@ function showQuestion(){ //Traz as perguntas e respostas
 
     let optionsHtml = ''
     for(let i in q.options){
-      optionsHtml += `<div data-op="${i}" class="option"><span>${parseInt(i)+1}</span>${q.options[i]}</div>`
+      optionsHtml += `<div data-op="${i}" class="option" tabindex="0"><span>${parseInt(i)+1}</span>${q.options[i]}</div>`
     }
     document.querySelector('.options').innerHTML = optionsHtml //inserir o iten na tela
 
