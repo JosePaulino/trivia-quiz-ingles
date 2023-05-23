@@ -3,9 +3,7 @@
 // variável para mostrar questão atual
 let currentQuestion = 0
 let correctAnswers = 0
-let contScore = 0
 showQuestion()
-
 
 //Evento do Botão Start
 document.querySelector('.end button').addEventListener('click', resetEvent)
@@ -19,8 +17,7 @@ function addName(){ //Capta o nome do usuário
   document.querySelector('.name2').style.display = 'block'
 
   document.querySelector('.name2').innerHTML = 'Let`s go ' + nome 
-  document.getElementById('name').value = ""
-  
+  document.getElementById('name').value = ""  
 }
 
 function showQuestion(){ //Traz as perguntas e respostas
@@ -59,7 +56,7 @@ function optionClickEvent(e){
     showQuestion() //Vai para proxima questao
 }
 
-//Esconde area de questoes e mostra area de rezultado
+//Esconde area de questoes e mostra area de resultado
 function finishQuiz(){
   let points = Math.floor((correctAnswers / questions.length) * 100) //Calcula a porcentagem de acerto.
 
