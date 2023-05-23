@@ -33,9 +33,9 @@ function showQuestion(){ //Traz as perguntas e respostas
     for(let i in q.options){
       optionsHtml += `<div data-op="${i}" class="option" tabindex="0"><span>${parseInt(i)+1}</span>${q.options[i]}</div>`
     }
-    document.querySelector('.options').innerHTML = optionsHtml //inserir o iten na tela
+    document.querySelector('.options').innerHTML = optionsHtml //inseri o item na tela
 
-    //cria um loop para adiciona o evento clinck para nova questao
+    //cria um loop para adiciona o evento click para nova questao
     document.querySelectorAll('.options .option').forEach(item =>{
       item.addEventListener('click', optionClickEvent)
     })     
